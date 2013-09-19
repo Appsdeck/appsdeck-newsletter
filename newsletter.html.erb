@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<!-- If you delete this meta tag, the ground will open and swallow you. -->
+<meta name="viewport" content="width=device-width" />
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title><%= @today.strftime("%B") %> newsletter</title>
+
+<link rel="stylesheet" type="text/css" href="css/email.css" >
+
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+
+<!-- HEADER -->
+<table class="head-wrap" bgcolor="#999999">
+	<tr>
+		<td></td>
+		<td class="header container" align="">
+
+			<!-- /content -->
+			<div class="content">
+				<table bgcolor="#999999" >
+					<tr>
+						<td><img src="http://www.appsdeck.eu/Appsdeck_50.png" alt="Appsdeck Logo" /></td>
+						<td align="right"><h6 class="collapse"><%= @today.strftime("%B") %> <%= @today.strftime("%Y") %></h6></td>
+					</tr>
+				</table>
+			</div><!-- /content -->
+
+		</td>
+		<td></td>
+	</tr>
+</table><!-- /HEADER -->
+
+<!-- BODY -->
+<table class="body-wrap" bgcolor="">
+	<tr>
+		<td></td>
+		<td class="container" align="" bgcolor="#E7E7E7">
+
+			<!-- content -->
+			<div class="content">
+				<table>
+					<tr>
+						<td>
+
+							<h1>Appsdeck newsletter</h1>
+							<p class="lead">Follow the building of the Appsdeck platform directly in your mailbox every month.</p>
+						</td>
+					</tr>
+				</table>
+			</div><!-- /content -->
+
+      <% for post in @posts %>
+			<!-- content -->
+			<div class="content">
+
+				<table bgcolor="">
+					<tr>
+						<td>
+							<h4><%= post.title %> <small><%= post.pubDate.strftime("%D %H:%M") %></small></h4>
+							<p class=""><%= post.description %></p>
+							<a class="btn" href="<%= post.link %>">Continue reading &raquo;</a>
+						</td>
+					</tr>
+				</table>
+
+			</div><!-- /content -->
+      <% end %>
+
+<div class="callout content">
+      <div class="content first">
+        <h3>News from the world</h3>
+      </div>
+      <% for article in @articles %>
+			<!-- content -->
+			<div class="content"><table bgcolor="">
+				<tr>
+					<td>
+						<h4><%= article.title %></h4>
+            <a href="<%= article.link %>"><small>continue reading on <%= URI(article.link).host.gsub("www.", "") %></small></a>
+					</td>
+				</tr>
+			</table></div><!-- /content -->
+      <% end %>
+</div>
+
+			<!-- content -->
+			<div class="content">
+				<table bgcolor="">
+					<tr>
+						<td>
+
+							<!-- social & contact -->
+							<table bgcolor="" class="social" width="100%">
+								<tr>
+									<td>
+
+										<!--- column 1 -->
+										<div class="column">
+											<table bgcolor="" cellpadding="" align="left">
+										<tr>
+											<td>
+
+												<h5 class="">Connect with Us:</h5>
+												<p class=""><a href="https://www.facebook.com/Appsdeck" class="soc-btn fb">Facebook</a> <a href="https://twitter.com/HelloAppsdeck" class="soc-btn tw">Twitter</a> <!--<a href="#" class="soc-btn gp">Google+</a>--></p>
+
+
+											</td>
+										</tr>
+									</table><!-- /column 1 -->
+										</div>
+
+										<!--- column 2 -->
+										<div class="column">
+											<table bgcolor="" cellpadding="" align="left">
+										<tr>
+											<td>
+
+												<h5 class="">Contact Info:</h5>
+												<p>
+                          Website: <strong><a href="http://www.appsdeck.eu">www.appsdeck.eu</a></strong>
+                          <br/>
+                          Email: <strong><a href="emailto:hello@appsdeck.eu">hello@appsdeck.eu</a></strong>
+                        </p>
+
+											</td>
+										</tr>
+									</table><!-- /column 2 -->
+										</div>
+
+										<div class="clear"></div>
+
+									</td>
+								</tr>
+							</table><!-- /social & contact -->
+
+						</td>
+					</tr>
+				</table>
+			</div><!-- /content -->
+
+
+		</td>
+		<td></td>
+	</tr>
+</table><!-- /BODY -->
+</body>
+</html>
