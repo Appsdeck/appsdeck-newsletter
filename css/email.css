@@ -55,6 +55,8 @@ a {
 
 .content.footer {
   margin-top: 25px; }
+.content.intro {
+  padding-bottom: 10px; }
 
 .callout a {
   font-weight: bold;
