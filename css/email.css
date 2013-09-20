@@ -44,7 +44,7 @@ a {
   margin: 15px 0; }
   .callout.content {
     padding: 15px 15px 0 15px;
-    margin: 15px 15px 0; }
+    margin: 30px 15px 0; }
   .callout .content {
     padding: 0 0 15px 0; }
     .callout .content.first {
@@ -52,6 +52,9 @@ a {
     .callout .content h4 {
       font-size: 16px;
       margin-bottom: 0; }
+
+.content.footer {
+  margin-top: 25px; }
 
 .callout a {
   font-weight: bold;
@@ -130,7 +133,8 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
 
 h1 {
   font-weight: 200;
-  font-size: 44px; }
+  font-size: 44px;
+  margin-bottom: 0; }
 
 h2 {
   font-weight: 200;
