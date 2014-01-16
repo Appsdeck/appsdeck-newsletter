@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width" />
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title><%= @today.strftime("%B") %> newsletter</title>
+<title>January newsletter</title>
 
 <link rel="stylesheet" type="text/css" href="css/email.css" >
 
@@ -24,7 +24,7 @@
 				<table bgcolor="#999999" >
 					<tr>
 						<td><a href="https://appsdeck.eu"><img src="https://appsdeck.eu/Appsdeck_50.png" alt="Appsdeck Logo" /></a></td>
-						<td align="right"><h6 class="collapse"><%= @today.strftime("%B") %> <%= @today.strftime("%Y") %></h6></td>
+						<td align="right"><h6 class="collapse">January 2014</h6></td>
 					</tr>
 				</table>
 			</div><!-- /content -->
@@ -70,38 +70,104 @@
 
       </div><!-- /extra content -->
 
-      <% @posts.each_with_index do |post, index| %>
+      
 			<!-- content -->
-			<div class="content<% if index == 0 %> w-top<% end %>">
+			<div class="content w-top">
 
 				<table bgcolor="">
 					<tr>
 						<td>
-							<h4><%= post.title %> <small><%= post.pubDate.strftime("%D %H:%M") %></small></h4>
-							<p class=""><%= post.description %></p>
-							<a class="btn" href="<%= post.link %>">Continue reading &raquo;</a>
+							<h4>Happy New Year! <small>01/07/14 17:52</small></h4>
+							<p class="">Happy New Year from the whole Appsdeck Team! We wish you the best for 2014!
+To start this new year...</p>
+							<a class="btn" href="http://blog.appsdeck.eu/post/72562243572">Continue reading &raquo;</a>
 						</td>
 					</tr>
 				</table>
 
 			</div><!-- /content -->
-      <% end %>
+      
+			<!-- content -->
+			<div class="content">
+
+				<table bgcolor="">
+					<tr>
+						<td>
+							<h4>Pythonists rejoy! We told you it was only temporary: we now... <small>11/21/13 18:22</small></h4>
+							<p class=""><img src="http://24.media.tumblr.com/6cdf1232b1f705573716e1c3733a7bbc/tumblr_mwmixiCFsZ1sibbyoo1_400.png"/><br/><br/><p><span class="userContent">Pythonists rejoy! We told you it was only temporary: we now supports Python. Proof here <a href="https://www.facebook.com/l.php?u=https%3A%2F%2Fsample-python-flask.appsdeck.eu%2F&h=dAQH9-ln_&enc=AZMZcfpThMNXyoyHpd7kI5fqYpjC4l-jNEqjLgYTw2LU_MWAqXR7daHZk_f8K_mb03WWKfp7B4H0HXpDauFooYs3dgHzuzB-W9b1KypcqjCmRWOGJi8-9CI-gKqmBr7oswsqDbdP6r8H69ZbQEsXdLkl&s=1" rel="nofollow nofollow" target="_blank"><a href="https://sample-python-flask.appsdeck.eu/">https://sample-python-flask.appsdeck.eu/</a></a></span></p></p>
+							<a class="btn" href="http://blog.appsdeck.eu/post/67669343854">Continue reading &raquo;</a>
+						</td>
+					</tr>
+				</table>
+
+			</div><!-- /content -->
+      
+			<!-- content -->
+			<div class="content">
+
+				<table bgcolor="">
+					<tr>
+						<td>
+							<h4>For those of you who cares about real-time stuff on the web, we... <small>11/07/13 18:04</small></h4>
+							<p class=""><img src="http://31.media.tumblr.com/89da71e1af3ea9f2b7d0041370088ec3/tumblr_mvwkrtyN2C1sibbyoo1_400.jpg"/><br/><br/><p>For those of you who cares about real-time stuff on the web, we now supports websockets!</p></p>
+							<a class="btn" href="http://blog.appsdeck.eu/post/66287470649">Continue reading &raquo;</a>
+						</td>
+					</tr>
+				</table>
+
+			</div><!-- /content -->
+      
+			<!-- content -->
+			<div class="content">
+
+				<table bgcolor="">
+					<tr>
+						<td>
+							<h4>MongoDB add-on, still a work in progress, but we’re... <small>11/06/13 17:00</small></h4>
+							<p class=""><img src="http://25.media.tumblr.com/cb93c47f35aa4c1283ccf011dfc8e93f/tumblr_mvun51NEKj1sibbyoo1_500.jpg"/><br/><br/><p><span class="userContent">MongoDB add-on, still a work in progress, but we’re getting closer now!</span></p></p>
+							<a class="btn" href="http://blog.appsdeck.eu/post/66190988063">Continue reading &raquo;</a>
+						</td>
+					</tr>
+				</table>
+
+			</div><!-- /content -->
+      
 
 <div class="callout content">
       <div class="content first">
         <h3>News from the world</h3>
       </div>
-      <% for article in @articles %>
+      
 			<!-- content -->
 			<div class="content"><table bgcolor="">
 				<tr>
 					<td>
-						<h4><%= article.title %></h4>
-            <a href="<%= article.link %>"><small>continue reading on <%= URI(article.link).host.gsub("www.", "") %></small></a>
+						<h4>Why 2014 will be the year of cloud assimilation and confusion — Gigaom Research</h4>
+            <a href="http://research.gigaom.com/2013/12/why-2014-will-be-the-year-of-cloud-assimilation-and-confusion/"><small>continue reading on research.gigaom.com</small></a>
 					</td>
 				</tr>
 			</table></div><!-- /content -->
-      <% end %>
+      
+			<!-- content -->
+			<div class="content"><table bgcolor="">
+				<tr>
+					<td>
+						<h4>Study: PaaS Market to Top $6.94B by 2018 | Cloud Computing Research content from Talkin' Cloud</h4>
+            <a href="http://talkincloud.com/cloud-computing-research/study-paas-market-top-694b-2018"><small>continue reading on talkincloud.com</small></a>
+					</td>
+				</tr>
+			</table></div><!-- /content -->
+      
+			<!-- content -->
+			<div class="content"><table bgcolor="">
+				<tr>
+					<td>
+						<h4>Platform-as-a-service market will triple in the next four years | CITEworld</h4>
+            <a href="http://www.citeworld.com/development/22653/paas-market-reach-14-billion-2017-idc-says"><small>continue reading on citeworld.com</small></a>
+					</td>
+				</tr>
+			</table></div><!-- /content -->
+      
 </div>
 
 			<!-- content -->

@@ -40,6 +40,16 @@ a
   cursor: pointer
   display: inline-block
 
+.body-wrap .container > .content:not(.intro):not(.callout)
+  border-bottom: 1px dotted #CCC
+  margin-bottom: 15px
+  padding-bottom: 30px
+
+.content.w-top
+  border-top: 1px dotted #CCC
+  margin-top: 30px
+  padding-top: 30px
+
 .callout
   padding: 15px
   background-color: #ECF8FF
@@ -47,6 +57,8 @@ a
   &.content
     padding: 15px 15px 0 15px
     margin: 30px 15px 0
+  &.no-top
+    margin-top: 0
   .content
     padding: 0 0 15px 0
     &.first
@@ -139,10 +151,8 @@ h1, h2, h3, h4, h5, h6
 
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small
   font-size: 60%
-  line-height: 60%
   white-space: nowrap
   color: #6f6f6f
-  line-height: 0
   text-transform: none
 
 h1
