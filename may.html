@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width" />
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title><%= @today.strftime("%B") %> newsletter</title>
+<title>May newsletter</title>
 
 <link rel="stylesheet" type="text/css" href="css/email.css" >
 
@@ -24,7 +24,7 @@
 				<table bgcolor="#F4F4F4" >
 					<tr>
 						<td><a href="https://appsdeck.eu"><img src="https://appsdeck.eu/logo.png" alt="Appsdeck Logo" style="width:100px;" /></a></td>
-						<td align="right"><h6 class="collapse"><%= @today.strftime("%B") %> <%= @today.strftime("%Y") %></h6></td>
+						<td align="right"><h6 class="collapse">May 2014</h6></td>
 					</tr>
 				</table>
 			</div><!-- /content -->
@@ -85,38 +85,53 @@
 
       </div><!-- /extra content -->
 
-      <% false && @posts.each_with_index do |post, index| %>
-			<!-- content -->
-			<div class="content<% if index == 0 %> w-top<% end %>">
-
-				<table bgcolor="">
-					<tr>
-						<td>
-							<h4><%= post.title %> <small><%= post.pubDate.strftime("%D %H:%M") %></small></h4>
-							<p class=""><%= post.description %></p>
-							<a class="btn" href="<%= post.link %>">Continue reading &raquo;</a>
-						</td>
-					</tr>
-				</table>
-
-			</div><!-- /content -->
-      <% end %>
+      
 
 <div class="callout content">
       <div class="content first">
         <h3>News from the world</h3>
       </div>
-      <% for article in @articles %>
+      
 			<!-- content -->
 			<div class="content"><table bgcolor="">
 				<tr>
 					<td>
-						<h4><%= article.title %></h4>
-            <a href="<%= article.link %>"><small>continue reading on <%= URI(article.link).host.gsub("www.", "") %></small></a>
+						<h4>Judge’s ruling spells bad news for U.S. cloud providers — Tech News and Analysis</h4>
+            <a href="http://gigaom.com/2014/04/28/judges-ruling-spells-bad-news-for-u-s-cloud-providers/"><small>continue reading on gigaom.com</small></a>
 					</td>
 				</tr>
 			</table></div><!-- /content -->
-      <% end %>
+      
+			<!-- content -->
+			<div class="content"><table bgcolor="">
+				<tr>
+					<td>
+						<h4>PaaS winners and losers, so far, might surprise you | ITworld</h4>
+            <a href="http://www.itworld.com/cloud-computing/400208/paas-winners-and-losers-so-far-might-surprise-you"><small>continue reading on itworld.com</small></a>
+					</td>
+				</tr>
+			</table></div><!-- /content -->
+      
+			<!-- content -->
+			<div class="content"><table bgcolor="">
+				<tr>
+					<td>
+						<h4>Marché du cloud en France : vers une croissance de 20% par an - JDN Web & Tech</h4>
+            <a href="http://www.journaldunet.com/solutions/cloud-computing/croissance-du-cloud-computing-en-2014-xerfi.shtml"><small>continue reading on journaldunet.com</small></a>
+					</td>
+				</tr>
+			</table></div><!-- /content -->
+      
+			<!-- content -->
+			<div class="content"><table bgcolor="">
+				<tr>
+					<td>
+						<h4>Virtual Roundtable: The Future of PaaS in Cloud Computing</h4>
+            <a href="http://www.infoq.com/articles/paas-roundtable"><small>continue reading on infoq.com</small></a>
+					</td>
+				</tr>
+			</table></div><!-- /content -->
+      
 </div>
 
 			<!-- content -->

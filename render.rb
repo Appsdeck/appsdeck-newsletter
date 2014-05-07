@@ -5,7 +5,7 @@ require "rss"
 
 @today = Time.now
 
-last = Time.new(2013, 11, 1)
+last = Time.new(2014, 2, 1)
 
 url = 'http://feeds.feedburner.com/HelloAppsdeck?format=xml'
 uri = URI.parse(url)
