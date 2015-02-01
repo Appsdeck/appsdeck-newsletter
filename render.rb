@@ -3,21 +3,22 @@ require "open-uri"
 require "rss"
 
 
-@today = Time.now
+@today = Time.new(2015, 1, 30)
 
-last = Time.new(2014, 2, 1)
+last = Time.new(2014, 6, 1)
 
 url = 'http://feeds.feedburner.com/HelloAppsdeck?format=xml'
+url = 'http://blog.scalingo.com/rss'
 uri = URI.parse(url)
 feed = uri.read
 rss = RSS::Parser.parse(feed, false, true)
-@posts = rss.items.delete_if{|x| x.pubDate < last }
+@posts = rss.items.select{|x| x.pubDate > last }
 
 url = 'http://feeds.delicious.com/v2/rss/strass/appsdeck+business'
 uri = URI.parse(url)
 feed = uri.read
 rss = RSS::Parser.parse(feed, false, true)
-@articles = rss.items.delete_if{|x| x.pubDate < last }
+@articles = rss.items.select{|x| x.pubDate > last }
 
 template = File.read("newsletter.html.erb")
 renderer = ERB.new(template)
